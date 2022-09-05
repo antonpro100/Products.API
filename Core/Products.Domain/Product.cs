@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Products.Domain
 {
@@ -8,7 +9,10 @@ namespace Products.Domain
 
         public string Name { get; set; }
         public string Description { get; set; }
+        public string ImagePath { get; set; }
         public decimal Price { get; set; }
+
+        public ICollection<PropuctProperty> Properties { get; set; }
 
         public bool IsActive { get; set; }
         public DateTime CreatedAt { get; set; }

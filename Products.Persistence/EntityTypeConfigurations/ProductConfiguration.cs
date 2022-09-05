@@ -10,7 +10,12 @@ namespace Products.Persistence.EntityTypeConfigurations
         {
             builder.HasKey(b => b.Id);
             builder.HasIndex(b => b.Id).IsUnique();
-            builder.Property(b => b.Name).HasMaxLength(250);
+            builder.Property(b => b.Name).IsRequired().HasMaxLength(250);
+            builder.OwnsMany(b => b.Properties, pp =>
+            {
+                pp.WithOwner().HasForeignKey(x => x.ProductId);
+                pp.Has
+            });
         }
     }
 }
