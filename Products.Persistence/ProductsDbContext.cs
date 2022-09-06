@@ -2,6 +2,8 @@
 using Products.Application.Interfaces;
 using Products.Domain;
 using Products.Persistence.EntityTypeConfigurations;
+using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 

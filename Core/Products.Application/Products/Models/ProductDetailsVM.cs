@@ -2,6 +2,7 @@
 using Products.Application.Common.Mappings;
 using Products.Domain;
 using System;
+using System.Collections.Generic;
 
 namespace Products.Application.Products.Models
 {
@@ -10,15 +11,13 @@ namespace Products.Application.Products.Models
         public Guid Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        public string ImagePath { get; set; }
         public decimal Price { get; set; }
-
+        public List<ProductPropertyVM> Properties { get; set; } = new List<ProductPropertyVM>();
         public void Mapping(Profile profile)
         {
             profile.CreateMap<Product, ProductDetailsVM>()
-                .ForMember(prodVM => prodVM.Id, c => c.MapFrom(prod => prod.Id))
-                .ForMember(prodVM => prodVM.Name, c => c.MapFrom(prod => prod.Name))
-                .ForMember(prodVM => prodVM.Description, c => c.MapFrom(prod => prod.Description))
-                .ForMember(prodVM => prodVM.Price, c => c.MapFrom(prod => prod.Price));
+                .ForMember(d => d.Properties, m => m.MapFrom(s => s.Properties));
         }
     }
 

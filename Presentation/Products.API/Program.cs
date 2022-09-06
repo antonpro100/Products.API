@@ -25,9 +25,9 @@ namespace Products.API
                     var context = services.GetRequiredService<ProductsDbContext>();
                     DbInitializer.Initialize(context);
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-
+                    throw;
                 }
             }
             host.Run();

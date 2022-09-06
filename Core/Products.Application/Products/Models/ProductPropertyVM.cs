@@ -5,7 +5,7 @@ using System;
 
 namespace Products.Application.Products.Models
 {
-    public class ProductLookupVM : IMapWith<Product>
+    public class ProductPropertyVM : IMapWith<ProductProperty>
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
@@ -14,7 +14,7 @@ namespace Products.Application.Products.Models
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<Product, ProductLookupVM>();
+            profile.CreateMap<ProductProperty, ProductPropertyVM>();
         }
     }
 }

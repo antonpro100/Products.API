@@ -12,7 +12,7 @@ namespace Products.Domain
         public string ImagePath { get; set; }
         public decimal Price { get; set; }
 
-        public ICollection<PropuctProperty> Properties { get; set; }
+        public ICollection<ProductProperty> Properties { get; set; }
 
         public bool IsActive { get; set; }
         public DateTime CreatedAt { get; set; }

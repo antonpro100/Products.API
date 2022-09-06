@@ -2,7 +2,7 @@
 
 namespace Products.Domain
 {
-    public class PropuctProperty
+    public class ProductProperty
     {
         public Guid ProductId { get; set; }
         public int OrderNumber { get; set; }
