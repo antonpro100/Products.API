@@ -7,10 +7,9 @@ namespace Products.Application.Products.Models
 {
     public class ProductPropertyVM : IMapWith<ProductProperty>
     {
-        public Guid Id { get; set; }
+        public int OrderNumber { get; set; }
         public string Name { get; set; }
-        public string ImagePath { get; set; }
-        public decimal Price { get; set; }
+        public string Value { get; set; }
 
         public void Mapping(Profile profile)
         {

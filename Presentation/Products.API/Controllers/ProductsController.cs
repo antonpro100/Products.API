@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Products.API.Models;
-using Products.Application.Products.Commands;
 using Products.Application.Products.Commands.CreateProduct;
 using Products.Application.Products.Commands.DeleteProduct;
 using Products.Application.Products.Commands.UpdateProduct;
@@ -13,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Products.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class ProductsController : BaseController
     {
         private readonly IMapper _mapper;
