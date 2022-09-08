@@ -3,6 +3,7 @@ using AutoMapper.QueryableExtensions;
 using Microsoft.EntityFrameworkCore;
 using Products.Core.Dtos;
 using Products.Core.Entities;
+using Products.Core.Exceptions;
 using Products.Core.Interfaces;
 using Products.DataAccess;
 using System;
@@ -36,7 +37,7 @@ namespace Products.Application.Services
         {
             var product = await _dbContext.Products.FirstOrDefaultAsync(p => p.Id == id);
             if (product == null)
-                throw new InvalidOperationException($"Product with Id {id} not found.");
+                throw new NotFoundException($"Product with Id {id} not found.");
 
             return _mapper.Map<ProductDto>(product);
         }
@@ -72,7 +73,7 @@ namespace Products.Application.Services
         {
             var product = await _dbContext.Products.FindAsync(dto.Id);
             if (product == null)
-                throw new InvalidOperationException($"Product with Id {dto.Id} not found.");
+                throw new NotFoundException($"Product with Id {dto.Id} not found.");
 
             product.Name = dto.Name;
             product.Description = dto.Description;
@@ -99,7 +100,7 @@ namespace Products.Application.Services
             var product = await _dbContext.Products.FindAsync(id);
 
             if (product == null)
-                throw new InvalidOperationException($"Product with Id {id} not found.");
+                throw new NotFoundException($"Product with Id {id} not found.");
 
             product.IsActive = false;
             product.UpdatedAt = DateTime.Now;

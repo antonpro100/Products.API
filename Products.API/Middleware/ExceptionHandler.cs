@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using Microsoft.AspNetCore.Http;
+using Products.Core.Exceptions;
 using System;
 using System.Net;
 using System.Text.Json;
@@ -35,11 +36,17 @@ namespace Products.API.Middleware
                 case ValidationException validationException:
                     code = HttpStatusCode.BadRequest;
                     result = JsonSerializer.Serialize(validationException.Errors);
-                    context.Response.StatusCode = (int)code;
-                    context.Response.ContentType = "application/json";
-                    await context.Response.WriteAsync(result);                    
-                    break;      
+                    break;
+                case NotFoundException notFoundException:
+                    code = HttpStatusCode.NotFound;
+                    result = notFoundException.Message;
+                    break;
             }
+
+            context.Response.StatusCode = (int)code;
+            context.Response.ContentType = "application/json";
+
+            await context.Response.WriteAsync(result);
         }
     }
 }
