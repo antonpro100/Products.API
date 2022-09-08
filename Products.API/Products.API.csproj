@@ -13,14 +13,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
     <PackageReference Include="FluentValidation" Version="10.3.5" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.5" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\Products.Application\Products.Application.csproj" />
-    <ProjectReference Include="..\..\Products.Persistence\Products.DataAccess.csproj" />
+    <ProjectReference Include="..\Products.Application\Products.Application.csproj" />
+    <ProjectReference Include="..\Products.DataAccess\Products.DataAccess.csproj" />
   </ItemGroup>
 
   <ItemGroup>

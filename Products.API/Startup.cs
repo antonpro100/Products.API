@@ -5,10 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Products.Application;
-using Products.Application.Common.Mappings;
-using Products.Application.Interfaces;
-using Products.Persistence;
-using System.Reflection;
+using Products.DataAccess;
 
 namespace Products.API
 {
@@ -20,13 +17,8 @@ namespace Products.API
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAutoMapper(config =>
-            {
-                config.AddProfile(new AssemblyMappingProfile(typeof(IProductsDbContext).Assembly));
-            });
-
             services.AddApplication();
-            services.AddPersistence(Configuration);
+            services.AddDataAccess(Configuration);
             services.AddControllers();
             services.AddMvc().AddFluentValidation(fv =>
             {

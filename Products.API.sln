@@ -3,21 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{336999E5-EF86-4408-BE63-B1A57841DE0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Core", "Products.Core\Products.Core.csproj", "{987A5F91-28BC-425E-80E1-1EF6E663DF75}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{69DC51C5-2811-4BD3-B3E0-63C73EF19821}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products.Application", "Products.Application\Products.Application.csproj", "{C9590722-9876-4AD1-B6DC-3878600881DC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{8B05678F-C4A2-42B2-8D53-80EFF6AEFE31}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products.DataAccess", "Products.DataAccess\Products.DataAccess.csproj", "{0350A022-DF82-4612-BC9B-7BDF60C390A8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9F443B0F-DCA5-4E9A-B551-2F36BC97D81A}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Domain", "Core\Products.Domain\Products.Domain.csproj", "{987A5F91-28BC-425E-80E1-1EF6E663DF75}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products.Application", "Core\Products.Application\Products.Application.csproj", "{C9590722-9876-4AD1-B6DC-3878600881DC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products.Persistence", "Products.Persistence\Products.Persistence.csproj", "{0350A022-DF82-4612-BC9B-7BDF60C390A8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products.API", "Presentation\Products.API\Products.API.csproj", "{C4BC41DB-81B2-4047-B40B-D8A93952F188}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products.API", "Products.API\Products.API.csproj", "{C4BC41DB-81B2-4047-B40B-D8A93952F188}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

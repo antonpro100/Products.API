@@ -1,15 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Products.Application.Interfaces;
 using Products.Core.Entities;
-using Products.Persistence.EntityTypeConfigurations;
+using Products.DataAccess.EntityTypeConfigurations;
 using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Products.Persistence
+namespace Products.DataAccess
 {
-    public class ProductsDbContext : DbContext, IProductsDbContext
+    public class ProductsDbContext : DbContext
     {
         public DbSet<Product> Products { get; set; }
 
