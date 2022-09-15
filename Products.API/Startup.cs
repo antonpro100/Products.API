@@ -24,7 +24,7 @@ namespace Products.API
             {
                 fv.RegisterValidatorsFromAssemblyContaining<Startup>();
             });
-
+            services.AddSwaggerGen();
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAll", policy =>
@@ -42,6 +42,8 @@ namespace Products.API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI();
             }
 
             app.UseRouting();
