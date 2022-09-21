@@ -42,9 +42,10 @@ namespace Products.API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI();
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI();
 
             app.UseRouting();
             app.UseHttpsRedirection();

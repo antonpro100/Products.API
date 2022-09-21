@@ -5,11 +5,17 @@ VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Core", "Products.Core\Products.Core.csproj", "{987A5F91-28BC-425E-80E1-1EF6E663DF75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products.Application", "Products.Application\Products.Application.csproj", "{C9590722-9876-4AD1-B6DC-3878600881DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Application", "Products.Application\Products.Application.csproj", "{C9590722-9876-4AD1-B6DC-3878600881DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products.DataAccess", "Products.DataAccess\Products.DataAccess.csproj", "{0350A022-DF82-4612-BC9B-7BDF60C390A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.DataAccess", "Products.DataAccess\Products.DataAccess.csproj", "{0350A022-DF82-4612-BC9B-7BDF60C390A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products.API", "Products.API\Products.API.csproj", "{C4BC41DB-81B2-4047-B40B-D8A93952F188}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.API", "Products.API\Products.API.csproj", "{C4BC41DB-81B2-4047-B40B-D8A93952F188}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F2F5FBF3-37DE-4696-9A25-23BDE83E8D8A}"
+	ProjectSection(SolutionItems) = preProject
+		Certificate.ps1 = Certificate.ps1
+		Docker.ps1 = Docker.ps1
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,12 +42,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{987A5F91-28BC-425E-80E1-1EF6E663DF75} = {336999E5-EF86-4408-BE63-B1A57841DE0E}
-		{C9590722-9876-4AD1-B6DC-3878600881DC} = {336999E5-EF86-4408-BE63-B1A57841DE0E}
-		{0350A022-DF82-4612-BC9B-7BDF60C390A8} = {69DC51C5-2811-4BD3-B3E0-63C73EF19821}
-		{C4BC41DB-81B2-4047-B40B-D8A93952F188} = {8B05678F-C4A2-42B2-8D53-80EFF6AEFE31}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1DA045D4-B51C-4B8C-8EB1-D8EB5B36E520}
