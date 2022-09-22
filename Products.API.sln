@@ -13,8 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.API", "Products.AP
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F2F5FBF3-37DE-4696-9A25-23BDE83E8D8A}"
 	ProjectSection(SolutionItems) = preProject
-		Certificate.ps1 = Certificate.ps1
-		Docker.ps1 = Docker.ps1
+		docker-compose.yaml = docker-compose.yaml
+		CertificateInstall.ps1 = CertificateInstall.ps1
 	EndProjectSection
 EndProject
 Global
