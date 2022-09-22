@@ -10,7 +10,7 @@ namespace Products.Core.Interfaces
     {
         Task<IEnumerable<ProductLookupDto>> GetAll();
         Task<ProductDto> GetById(Guid id);
-        Task<ProductDto> Create(ProductDto dto, Guid userId, CancellationToken cancellationToken);
+        Task<ProductDto> Create(ProductCreateDto dto, Guid userId, CancellationToken cancellationToken);
         Task<ProductDto> Update(ProductDto dto, Guid userId, CancellationToken cancellationToken);
         Task Delete(Guid id, Guid userId, CancellationToken cancellationToken);
     }

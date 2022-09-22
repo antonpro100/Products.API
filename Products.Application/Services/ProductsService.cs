@@ -42,7 +42,7 @@ namespace Products.Application.Services
             return _mapper.Map<ProductDto>(product);
         }
 
-        public async Task<ProductDto> Create(ProductDto dto, Guid userId, CancellationToken cancellationToken)
+        public async Task<ProductDto> Create(ProductCreateDto dto, Guid userId, CancellationToken cancellationToken)
         {
             var product = new Product
             {
@@ -64,9 +64,7 @@ namespace Products.Application.Services
             await _dbContext.Products.AddAsync(product, cancellationToken);
             await _dbContext.SaveChangesAsync(cancellationToken);
 
-            dto.Id = product.Id;
-
-            return dto;
+            return _mapper.Map<ProductDto>(product);
         }
 
         public async Task<ProductDto> Update(ProductDto dto, Guid userId, CancellationToken cancellationToken)

@@ -34,7 +34,7 @@ namespace Products.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<ProductDto>> Post([FromBody] ProductDto dto, CancellationToken cancellationToken)
+        public async Task<ActionResult<ProductDto>> Post([FromBody] ProductCreateDto dto, CancellationToken cancellationToken)
         {
             var result = await _productsService.Create(dto, UserId, cancellationToken);
 
